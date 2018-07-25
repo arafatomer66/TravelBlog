@@ -14,6 +14,8 @@
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
+Route::get('/map', 'PagesController@map');
+Route::get('/mapload', 'PagesController@mapload');
 Route::resource('posts','PostsController');
 
 
@@ -21,3 +23,11 @@ Route::resource('posts','PostsController');
 
 
 
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');

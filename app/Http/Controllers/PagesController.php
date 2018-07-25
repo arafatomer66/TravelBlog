@@ -21,7 +21,19 @@ class PagesController extends Controller
    public function services()
    {
     $title = 'Services';
-    return view('pages.services')->with('title',$title);
+    return view('pages.google')->with('title',$title);
    	
+   }
+   public function map()
+   {
+    $title = 'Map';
+    return view('pages.map')->with('title',$title);
+    
+   }
+   public function mapload()
+   {
+    $title = 'MapLoad';
+    return view('pages.map')->with('title',$title);
+    
    }
 }
